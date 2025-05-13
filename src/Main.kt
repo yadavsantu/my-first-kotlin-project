@@ -1,4 +1,9 @@
 fun main() {
+    println("Followings are the basic data types in kotlin")
+   displayBasicDataTypes()
+    collectionsInKotlin()
+}
+fun displayBasicDataTypes(){
     // Numeric types
     val byteVal: Byte = 127
     val shortVal: Short = 30000
@@ -32,4 +37,18 @@ fun main() {
 
     // Accessing characters in a string
     println("First letter of message: ${message[0]}")
+}
+fun collectionsInKotlin(){
+    println("Lists in Kotlin")
+    //lists
+    //read-only lists
+    val readOnlyShapes=listOf<String>("Triangle","Square","Circle")
+    println(readOnlyShapes)
+    //mutable lists
+    val shapes: MutableList<String> =mutableListOf("triangle","square","circle")
+    shapes.add("Rectangle")
+    println(shapes)
+    val shapesLocked: List<String> = shapes // shapesLocked is now read-only list
+    println(shapesLocked)
+
 }
